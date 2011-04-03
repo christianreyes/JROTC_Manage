@@ -1,0 +1,16 @@
+<% title "Award" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @award.name %>
+</p>
+<p>
+  <strong>Cadet:</strong>
+  <%= @award.cadet_id %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_award_path(@award) %> |
+  <%= link_to "Destroy", @award, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", awards_path %>
+</p>

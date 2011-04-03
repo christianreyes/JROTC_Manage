@@ -1,0 +1,19 @@
+<% title "Cadets" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Platoon</th>
+  </tr>
+  <% for cadet in @cadets %>
+    <tr>
+      <td><%= cadet.name %></td>
+      <td><%= cadet.platoon %></td>
+      <td><%= link_to "Show", cadet %></td>
+      <td><%= link_to "Edit", edit_cadet_path(cadet) %></td>
+      <td><%= link_to "Destroy", cadet, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Cadet", new_cadet_path %></p>

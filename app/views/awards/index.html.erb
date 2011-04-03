@@ -1,0 +1,19 @@
+<% title "Awards" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Cadet</th>
+  </tr>
+  <% for award in @awards %>
+    <tr>
+      <td><%= award.name %></td>
+      <td><%= award.cadet_id %></td>
+      <td><%= link_to "Show", award %></td>
+      <td><%= link_to "Edit", edit_award_path(award) %></td>
+      <td><%= link_to "Destroy", award, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Award", new_award_path %></p>
