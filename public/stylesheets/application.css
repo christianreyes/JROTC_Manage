@@ -37,6 +37,17 @@ table {
   border: solid 1px black;
 }
 
+#footer {
+  margin: 15px;
+  border-top: 2px solid gray;
+  text-align: center;
+}
+
+#footer img{
+	display: inline-block;
+	vertical-align: middle;
+}
+
 #flash_notice, #flash_error, #flash_alert {
   padding: 5px 8px;
   margin: 10px 0;
