@@ -2,11 +2,8 @@
 
 Proof of concept management application for Troy High School NJROTC.
 
-== Application link
-http://jrotcmanage.heroku.com
+<b>Application link:</b> http://jrotcmanage.heroku.com
 
-== Entity-Relationship Diagram
-http://www.gliffy.com/publish/2588747/
+<b>Entity-Relationship Diagram:</b> http://www.gliffy.com/publish/2588747/
 
-==Unit homepage
-http://njrotc.troyhigh.com
+<b>Unit Homepage:</b> http://njrotc.troyhigh.com
