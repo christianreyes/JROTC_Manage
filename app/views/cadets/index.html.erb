@@ -1,19 +1,31 @@
-<% title "Cadets" %>
+<h1>Listing cadets</h1>
 
 <table>
   <tr>
-    <th>Name</th>
+    <th>First name</th>
+    <th>Last name</th>
     <th>Platoon</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th></th>
+    <th></th>
+    <th></th>
   </tr>
-  <% for cadet in @cadets %>
-    <tr>
-      <td><%= cadet.name %></td>
-      <td><%= cadet.platoon %></td>
-      <td><%= link_to "Show", cadet %></td>
-      <td><%= link_to "Edit", edit_cadet_path(cadet) %></td>
-      <td><%= link_to "Destroy", cadet, :confirm => 'Are you sure?', :method => :delete %></td>
-    </tr>
-  <% end %>
+
+<% @cadets.each do |cadet| %>
+  <tr>
+    <td><%= cadet.first_name %></td>
+    <td><%= cadet.last_name %></td>
+    <td><%= cadet.platoon %></td>
+    <td><%= cadet.email %></td>
+    <td><%= cadet.phone %></td>
+    <td><%= link_to 'Show', cadet %></td>
+    <td><%= link_to 'Edit', edit_cadet_path(cadet) %></td>
+    <td><%= link_to 'Destroy', cadet, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
 </table>
 
-<p><%= link_to "New Cadet", new_cadet_path %></p>
+<br />
+
+<%= link_to 'New Cadet', new_cadet_path %>

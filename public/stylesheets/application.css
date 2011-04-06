@@ -12,10 +12,21 @@ a {
   color: #0000FF;
 }
 
+table {
+	width: 100%;
+	text-align: left;
+}
+
 .clear {
   clear: both;
   height: 0;
   overflow: hidden;
+}
+
+#header_container {
+  text-align: center;
+  /*border: solid 1px black;
+  */
 }
 
 #container {
@@ -24,7 +35,6 @@ a {
   background-color: #FFF;
   padding: 20px 40px;
   border: solid 1px black;
-  margin-top: 20px;
 }
 
 #flash_notice, #flash_error, #flash_alert {
@@ -72,4 +82,52 @@ a {
 
 .error_messages ul {
   margin: 0;
+}
+
+/*Menu code*/
+
+#menu 
+{
+	-moz-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    text-align: center;
+	width: 100%;
+	height: 30px;
+	margin: 0 auto;
+	padding: 0;
+	background: #303333;
+}
+
+#menu ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	line-height: normal;
+}
+
+
+#menu li {
+	float: left;
+}
+
+#menu a {
+	display: block;
+	width: 130px;
+	height: 25px;
+	padding-top: 5px;
+	border-right: 1px solid #FFFFFF;
+	text-decoration: none;
+	text-align: center;
+	font-family: Ariel, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	color: #FFFFFF;
+	border: none;
+}
+
+#menu a:hover, #menu .current_page_item a {
+	-moz-border-radius: 10px 10px 10x 10px;
+    border-radius: 10px 10px 10px 10px;
+	background: #2C2C2C;
+	text-decoration: none;
 }

@@ -1,0 +1,31 @@
+<h1>Listing ribbons</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Seniority</th>
+    <th>Num hours</th>
+    <th>Num events</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @ribbons.each do |ribbon| %>
+  <tr>
+    <td><%= ribbon.name %></td>
+    <td><%= ribbon.description %></td>
+    <td><%= ribbon.seniority %></td>
+    <td><%= ribbon.num_hours %></td>
+    <td><%= ribbon.num_events %></td>
+    <td><%= link_to 'Show', ribbon %></td>
+    <td><%= link_to 'Edit', edit_ribbon_path(ribbon) %></td>
+    <td><%= link_to 'Destroy', ribbon, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Ribbon', new_ribbon_path %>

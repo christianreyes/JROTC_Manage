@@ -32,3 +32,4 @@ gem 'formtastic'
 #   gem 'webrat'
 # end
 gem "mocha", :group => :test
+gem "bcrypt-ruby", :require => "bcrypt"

@@ -1,19 +1,25 @@
-<% title "Awards" %>
+<h1>Listing awards</h1>
 
 <table>
   <tr>
-    <th>Name</th>
+    <th>Ribbon</th>
     <th>Cadet</th>
+    <th></th>
+    <th></th>
+    <th></th>
   </tr>
-  <% for award in @awards %>
-    <tr>
-      <td><%= award.name %></td>
-      <td><%= award.cadet.name %></td>
-      <td><%= link_to "Show", award %></td>
-      <td><%= link_to "Edit", edit_award_path(award) %></td>
-      <td><%= link_to "Destroy", award, :confirm => 'Are you sure?', :method => :delete %></td>
-    </tr>
-  <% end %>
+
+<% @awards.each do |award| %>
+  <tr>
+    <td><%= award.ribbon_id %></td>
+    <td><%= award.cadet_id %></td>
+    <td><%= link_to 'Show', award %></td>
+    <td><%= link_to 'Edit', edit_award_path(award) %></td>
+    <td><%= link_to 'Destroy', award, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
 </table>
 
-<p><%= link_to "New Award", new_award_path %></p>
+<br />
+
+<%= link_to 'New Award', new_award_path %>

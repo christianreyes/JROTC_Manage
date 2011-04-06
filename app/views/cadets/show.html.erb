@@ -1,27 +1,30 @@
-<% title "Cadet" %>
+<p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
-  <%= @cadet.name %>
+  <b>First name:</b>
+  <%= @cadet.first_name %>
 </p>
+
 <p>
-  <strong>Platoon:</strong>
+  <b>Last name:</b>
+  <%= @cadet.last_name %>
+</p>
+
+<p>
+  <b>Platoon:</b>
   <%= @cadet.platoon %>
 </p>
 
-<table>
-    <tr>
-        <th>Award Name</th>
-    </tr>
-    <% for award in @awards %>
-        <tr>
-            <td><%= award.name %></td>
-        </tr>
-    <% end %>
-<table>
+<p>
+  <b>Email:</b>
+  <%= @cadet.email %>
+</p>
 
 <p>
-  <%= link_to "Edit", edit_cadet_path(@cadet) %> |
-  <%= link_to "Destroy", @cadet, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", cadets_path %>
+  <b>Phone:</b>
+  <%= @cadet.phone %>
 </p>
+
+
+<%= link_to 'Edit', edit_cadet_path(@cadet) %> |
+<%= link_to 'Back', cadets_path %>

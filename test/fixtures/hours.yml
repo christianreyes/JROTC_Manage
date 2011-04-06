@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  roster_id: 1
+  award_id: 1
+  num_hours: 1
+
+two:
+  roster_id: 1
+  award_id: 1
+  num_hours: 1

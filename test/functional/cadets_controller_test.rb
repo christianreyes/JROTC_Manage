@@ -1,54 +1,49 @@
 require 'test_helper'
 
 class CadetsControllerTest < ActionController::TestCase
-  def test_index
+  setup do
+    @cadet = cadets(:one)
+  end
+
+  test "should get index" do
     get :index
-    assert_template 'index'
+    assert_response :success
+    assert_not_nil assigns(:cadets)
   end
 
-  def test_show
-    get :show, :id => Cadet.first
-    assert_template 'show'
-  end
-
-  def test_new
+  test "should get new" do
     get :new
-    assert_template 'new'
+    assert_response :success
   end
 
-  def test_create_invalid
-    Cadet.any_instance.stubs(:valid?).returns(false)
-    post :create
-    assert_template 'new'
+  test "should create cadet" do
+    assert_difference('Cadet.count') do
+      post :create, :cadet => @cadet.attributes
+    end
+
+    assert_redirected_to cadet_path(assigns(:cadet))
   end
 
-  def test_create_valid
-    Cadet.any_instance.stubs(:valid?).returns(true)
-    post :create
-    assert_redirected_to cadet_url(assigns(:cadet))
+  test "should show cadet" do
+    get :show, :id => @cadet.to_param
+    assert_response :success
   end
 
-  def test_edit
-    get :edit, :id => Cadet.first
-    assert_template 'edit'
+  test "should get edit" do
+    get :edit, :id => @cadet.to_param
+    assert_response :success
   end
 
-  def test_update_invalid
-    Cadet.any_instance.stubs(:valid?).returns(false)
-    put :update, :id => Cadet.first
-    assert_template 'edit'
+  test "should update cadet" do
+    put :update, :id => @cadet.to_param, :cadet => @cadet.attributes
+    assert_redirected_to cadet_path(assigns(:cadet))
   end
 
-  def test_update_valid
-    Cadet.any_instance.stubs(:valid?).returns(true)
-    put :update, :id => Cadet.first
-    assert_redirected_to cadet_url(assigns(:cadet))
-  end
+  test "should destroy cadet" do
+    assert_difference('Cadet.count', -1) do
+      delete :destroy, :id => @cadet.to_param
+    end
 
-  def test_destroy
-    cadet = Cadet.first
-    delete :destroy, :id => cadet
-    assert_redirected_to cadets_url
-    assert !Cadet.exists?(cadet.id)
+    assert_redirected_to cadets_path
   end
 end

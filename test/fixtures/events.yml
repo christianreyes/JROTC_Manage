@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  date: 2011-04-06
+  start_time: 2011-04-06 00:59:23
+  end_time: 2011-04-06 00:59:23
+  description: MyText
+  cadet_in_charge_id: 1
+
+two:
+  name: MyString
+  date: 2011-04-06
+  start_time: 2011-04-06 00:59:23
+  end_time: 2011-04-06 00:59:23
+  description: MyText
+  cadet_in_charge_id: 1

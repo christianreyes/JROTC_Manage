@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Roster:</b>
+  <%= @hour.roster_id %>
+</p>
+
+<p>
+  <b>Award:</b>
+  <%= @hour.award_id %>
+</p>
+
+<p>
+  <b>Num hours:</b>
+  <%= @hour.num_hours %>
+</p>
+
+
+<%= link_to 'Edit', edit_hour_path(@hour) %> |
+<%= link_to 'Back', hours_path %>

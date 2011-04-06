@@ -1,7 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
 one:
-  name: MyString
+  ribbon_id: 1
   cadet_id: 1
 
 two:
-  name: MyString
+  ribbon_id: 1
   cadet_id: 1

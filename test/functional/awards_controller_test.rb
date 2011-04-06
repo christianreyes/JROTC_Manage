@@ -1,54 +1,49 @@
 require 'test_helper'
 
 class AwardsControllerTest < ActionController::TestCase
-  def test_index
+  setup do
+    @award = awards(:one)
+  end
+
+  test "should get index" do
     get :index
-    assert_template 'index'
+    assert_response :success
+    assert_not_nil assigns(:awards)
   end
 
-  def test_show
-    get :show, :id => Award.first
-    assert_template 'show'
-  end
-
-  def test_new
+  test "should get new" do
     get :new
-    assert_template 'new'
+    assert_response :success
   end
 
-  def test_create_invalid
-    Award.any_instance.stubs(:valid?).returns(false)
-    post :create
-    assert_template 'new'
+  test "should create award" do
+    assert_difference('Award.count') do
+      post :create, :award => @award.attributes
+    end
+
+    assert_redirected_to award_path(assigns(:award))
   end
 
-  def test_create_valid
-    Award.any_instance.stubs(:valid?).returns(true)
-    post :create
-    assert_redirected_to award_url(assigns(:award))
+  test "should show award" do
+    get :show, :id => @award.to_param
+    assert_response :success
   end
 
-  def test_edit
-    get :edit, :id => Award.first
-    assert_template 'edit'
+  test "should get edit" do
+    get :edit, :id => @award.to_param
+    assert_response :success
   end
 
-  def test_update_invalid
-    Award.any_instance.stubs(:valid?).returns(false)
-    put :update, :id => Award.first
-    assert_template 'edit'
+  test "should update award" do
+    put :update, :id => @award.to_param, :award => @award.attributes
+    assert_redirected_to award_path(assigns(:award))
   end
 
-  def test_update_valid
-    Award.any_instance.stubs(:valid?).returns(true)
-    put :update, :id => Award.first
-    assert_redirected_to award_url(assigns(:award))
-  end
+  test "should destroy award" do
+    assert_difference('Award.count', -1) do
+      delete :destroy, :id => @award.to_param
+    end
 
-  def test_destroy
-    award = Award.first
-    delete :destroy, :id => award
-    assert_redirected_to awards_url
-    assert !Award.exists?(award.id)
+    assert_redirected_to awards_path
   end
 end

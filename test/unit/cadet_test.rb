@@ -1,7 +1,8 @@
 require 'test_helper'
 
 class CadetTest < ActiveSupport::TestCase
-  def test_should_be_valid
-    assert Cadet.new.valid?
+  # Replace this with your real tests.
+  test "the truth" do
+    assert true
   end
 end

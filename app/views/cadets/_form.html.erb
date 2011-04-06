@@ -1,8 +1,37 @@
-<%= semantic_form_for @cadet do |f| %>
-  <%= f.error_messages %>
-  <%= f.inputs do %>
-      <%= f.input :name %>
-      <%= f.input :platoon %>
+<%= form_for(@cadet) do |f| %>
+  <% if @cadet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cadet.errors.count, "error") %> prohibited this cadet from being saved:</h2>
+
+      <ul>
+      <% @cadet.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
   <% end %>
-  <%= f.buttons %>
+
+  <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :platoon %><br />
+    <%= f.text_field :platoon %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
 <% end %>

@@ -1,16 +1,15 @@
-<% title "Award" %>
+<p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
-  <%= @award.name %>
-</p>
-<p>
-  <strong>Cadet:</strong>
-  <%= @award.cadet.name %>
+  <b>Ribbon:</b>
+  <%= @award.ribbon_id %>
 </p>
 
 <p>
-  <%= link_to "Edit", edit_award_path(@award) %> |
-  <%= link_to "Destroy", @award, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", awards_path %>
+  <b>Cadet:</b>
+  <%= @award.cadet_id %>
 </p>
+
+
+<%= link_to 'Edit', edit_award_path(@award) %> |
+<%= link_to 'Back', awards_path %>
