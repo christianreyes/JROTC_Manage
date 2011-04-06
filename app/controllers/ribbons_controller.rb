@@ -14,6 +14,7 @@ class RibbonsController < ApplicationController
   # GET /ribbons/1.xml
   def show
     @ribbon = Ribbon.find(params[:id])
+	@awards = @ribbon.awards
 
     respond_to do |format|
       format.html # show.html.erb

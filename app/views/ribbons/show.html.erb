@@ -25,6 +25,18 @@
   <%= @ribbon.num_events %>
 </p>
 
+<h2>Cadets</h2>
+
+<table>
+	<tr>
+		<th>Cadet</th>
+	</tr>
+	<% for award in @awards %>
+	<tr>
+		<td><%= award.cadet.name %></td>
+	</tr>
+	<% end %>
+</table>
 
 <%= link_to 'Edit', edit_ribbon_path(@ribbon) %> |
 <%= link_to 'Back', ribbons_path %>
