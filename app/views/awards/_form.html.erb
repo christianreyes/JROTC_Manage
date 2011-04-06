@@ -10,14 +10,13 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :ribbon_id %><br />
-    <%= f.text_field :ribbon_id %>
-  </div>
   <div class="field">
     <%= f.label :cadet_id %><br />
-    <%= f.text_field :cadet_id %>
+	<%= f.collection_select(:cadet_id ,@cadets,:id, :name,{:prompt =>"Select Cadet"})%>
+  </div>
+  <div class="field">
+    <%= f.label :ribbon_id %><br />
+	<%= f.collection_select(:ribbon_id ,@ribbons,:id, :name,{:prompt =>"Select Cadet"})%>
   </div>
   <div class="actions">
     <%= f.submit %>

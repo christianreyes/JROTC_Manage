@@ -14,6 +14,7 @@ class CadetsController < ApplicationController
   # GET /cadets/1.xml
   def show
     @cadet = Cadet.find(params[:id])
+	@awards = @cadet.awards
 
     respond_to do |format|
       format.html # show.html.erb

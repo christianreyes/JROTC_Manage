@@ -25,6 +25,8 @@ class AwardsController < ApplicationController
   # GET /awards/new.xml
   def new
     @award = Award.new
+	@cadets = Cadet.all
+	@ribbons = Ribbon.all
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,12 +37,16 @@ class AwardsController < ApplicationController
   # GET /awards/1/edit
   def edit
     @award = Award.find(params[:id])
+	@cadets = Cadets.all
+	@ribbons = Ribbon.all
   end
 
   # POST /awards
   # POST /awards.xml
   def create
     @award = Award.new(params[:award])
+	@cadets = Cadet.all
+	@ribbons = Ribbon.all
 
     respond_to do |format|
       if @award.save
@@ -57,6 +63,8 @@ class AwardsController < ApplicationController
   # PUT /awards/1.xml
   def update
     @award = Award.find(params[:id])
+	@cadets = Cadet.all
+	@ribbons = Ribbon.all
 
     respond_to do |format|
       if @award.update_attributes(params[:award])

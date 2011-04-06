@@ -25,6 +25,20 @@
   <%= @cadet.phone %>
 </p>
 
+<h2>Ribbons</h2>
+
+<table>
+	<tr>
+		<th>Ribbon</th>
+	</tr>
+	<% for award in @awards %>
+	<tr>
+		<td><%= award.ribbon.name %></td>
+	</tr>
+	<% end %>
+</table>
+
+<br/>
 
 <%= link_to 'Edit', edit_cadet_path(@cadet) %> |
 <%= link_to 'Back', cadets_path %>
