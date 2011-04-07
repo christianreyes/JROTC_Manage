@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110406050336) do
+ActiveRecord::Schema.define(:version => 20110407065904) do
 
   create_table "awards", :force => true do |t|
     t.integer  "ribbon_id"
@@ -56,6 +56,7 @@ ActiveRecord::Schema.define(:version => 20110406050336) do
     t.integer  "num_events"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image_path"
   end
 
   create_table "rosters", :force => true do |t|

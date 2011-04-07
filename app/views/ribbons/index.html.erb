@@ -15,7 +15,7 @@
 <% @ribbons.each do |ribbon| %>
   <tr>
     <td><%= ribbon.name %></td>
-    <td><%= ribbon.description %></td>
+    <td><%= image_tag(ribbon.image_path, :size => "99x27", :alt => ribbon.image_path) if ribbon.image_path %> </td>
     <td><%= ribbon.seniority %></td>
     <td><%= ribbon.num_hours %></td>
     <td><%= ribbon.num_events %></td>

@@ -12,33 +12,33 @@ namespace :db do
 	# Step 0: clear any old data in the db
     [Ribbon, Award].each(&:destroy_all)
 	
-	ribs =  ["Meritorious Achievement",
-			 "Distinguished Unit",
-			 "Distinguished Cadet",
-			 "Honor Cadet",
-			 "Cadet Achievement",
-			 "Aptitude",
-			 "Naval Science IV Outstanding Cadet",
-			 "Naval Science III Outstanding Cadet",
-			 "Naval Science II Outstanding Cadet",
-			 "Naval Science I Outstanding Cadet",
-			 "Exemplary Conduct",
-			 "Academic Award",
-			 "Exemplary Personal Appereance",
-			 "Physical Fitness",
-			 "Participation",
-			 "Unit Service",
-			 "Community Service",
-			 "Drill Team",
-			 "Color Guard",
-			 "Rifle Team",
-			 "Orienteering",
-			 "Recruiting",
-			 "Mini-Boot Camp",
-			 "Sea Cruise"]
+	ribs =  [["Meritorious Achievement", "meritach"],
+			 ["Distinguished Unit", "distunit"],
+			 ["Distinguished Cadet","distcadet"],
+			 ["Honor Cadet", "honorcad"],
+			 ["Cadet Achievement","cadach"],
+			 ["Aptitude","aptitude"],
+			 ["Naval Science IV Outstanding Cadet","nsivoutcad"],
+			 ["Naval Science III Outstanding Cadet","nsiiioutcad"],
+			 ["Naval Science II Outstanding Cadet","nsiioutcad"],
+			 ["Naval Science I Outstanding Cadet","nsioutcad"],
+			 ["Exemplary Conduct","exemplary"],
+			 ["Academic Award","academic"],
+			 ["Exemplary Personal Appereance","personapp"],
+			 ["Physical Fitness","physfit"],
+			 ["Participation","participat"],
+			 ["Unit Service","unitserv"],
+			 ["Community Service","commserv"],
+			 ["Drill Team","drillteam"],
+			 ["Color Guard","colorguard"],
+			 ["Rifle Team","rifleteam"],
+			 ["Orienteering","orienteer"],
+			 ["Recruiting","recruiting"],
+			 ["Mini-Boot Camp","miniboot"],
+			 ["Sea Cruise","seacruise"]]
 	
 	ribs.each_with_index do |data, i|  
-	  r = Ribbon.new( :name => data , :seniority => i)
+	  r = Ribbon.new( :name => data[0] , :image_path => "ribbons/" + data[1] + ".jpg", :seniority => i)
 	  r.save!
 	end
     
