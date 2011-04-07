@@ -21,7 +21,8 @@
     <td><%= ribbon.num_events %></td>
     <td><%= link_to 'Show', ribbon %></td>
     <td><%= link_to 'Edit', edit_ribbon_path(ribbon) %></td>
-    <td><%= link_to 'Destroy', ribbon, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Destroy', ribbon, :confirm => 'Are you sure?', :method => :delete,
+		:remote=>true, :class=>'delete_ribbon'  %></td>
   </tr>
 <% end %>
 </table>

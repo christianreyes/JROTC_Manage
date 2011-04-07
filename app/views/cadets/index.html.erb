@@ -19,7 +19,8 @@
     <td><%= cadet.phone %></td>
     <td><%= link_to 'Show', cadet %></td>
     <td><%= link_to 'Edit', edit_cadet_path(cadet) %></td>
-    <td><%= link_to 'Destroy', cadet, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Destroy', cadet, :confirm => 'Are you sure?', 
+		:method => :delete , :remote=>true, :class=>'delete_cadet' %></td>
   </tr>
 <% end %>
 </table>
