@@ -7,7 +7,7 @@ class HomeController < ApplicationController
 	Feedback.feedback_message(@feedback).deliver
 	
 	respond_to do |format|
-      format.js
+      format.js { render :nothing => true }
     end
   end
 end
