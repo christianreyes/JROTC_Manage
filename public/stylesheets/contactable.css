@@ -101,7 +101,7 @@
 }
 
 #contactable form#contactForm #loading {
-	background: url(images/ajax-loader.gif) no-repeat;
+	background: url(../images/ajax-loader.gif) no-repeat;
 	width:55px;
 	height:55px;
 	margin: 100px auto;

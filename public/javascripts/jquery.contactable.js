@@ -16,7 +16,7 @@
 	$.fn.contactable = function(options) {
 		//set default options  
 		var defaults = {
-			url: 'http://YourServerHere.com/contactable/mail.php',
+			url: 'http://127.0.0.1:3000/feedback/',
 			name: 'Name',
 			email: 'Email',
 			message : 'Message',
@@ -26,7 +26,6 @@
 			notRecievedMsg : 'Sorry but your message could not be sent, try again later',
 			disclaimer: 'Please feel free to get in touch, we value your feedback',
 			hideOnSubmit: false
-
 		};
 
 		//call in the default otions
