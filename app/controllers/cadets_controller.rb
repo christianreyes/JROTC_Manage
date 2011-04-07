@@ -7,6 +7,7 @@ class CadetsController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @cadets }
+
     end
   end
 
