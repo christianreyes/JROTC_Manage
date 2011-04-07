@@ -16,7 +16,7 @@
 	$.fn.contactable = function(options) {
 		//set default options  
 		var defaults = {
-			url: 'http://127.0.0.1:3000/feedback/',
+			url: 'http://jrotcmanage.heroku.com/feedback/',
 			name: 'Name',
 			email: 'Email',
 			message : 'Message',
