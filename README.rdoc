@@ -10,6 +10,8 @@ Proof of concept management application for Troy High School NJROTC.
 
 <b>Group email:</b> jrotcmanage@gmail.com
 
+===
+
 Run this command to populate the database with the ribbons:
 
     rake db:populate
