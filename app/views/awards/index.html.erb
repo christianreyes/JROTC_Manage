@@ -2,14 +2,16 @@
 
 <table class="minimal">
 	<tr>
-		<th>Ribbon</th>
 		<th>Cadet</th>
+		<th>Ribbon</th>
+		<th>Image</th>
 		<th colspan="3">Actions</th>
 	</tr>
 	<% @awards.each do |award| %>
 	  <tr>
-		<td><%= award.ribbon.name %></td>
 		<td><%= award.cadet.name %></td>
+		<td><%= award.ribbon.name %></td>
+		<td><%= image_tag(award.ribbon.image_path, :size => "99x27", :alt => award.ribbon.image_path) if award.ribbon.image_path %> </td>
 		<td><%= link_to 'Show', award %></td>
 		<td><%= link_to 'Edit', edit_award_path(award) %></td>
 		<td><%= link_to 'Destroy', award, :confirm => 'Are you sure?', :method => :delete %></td>
