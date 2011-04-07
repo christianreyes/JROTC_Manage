@@ -9,3 +9,7 @@ Proof of concept management application for Troy High School NJROTC.
 <b>Unit Homepage:</b> http://njrotc.troyhigh.com
 
 <b>Group email:</b> jrotcmanage@gmail.com
+
+Run this command to populate the database with the ribbons:
+
+    rake db:populate
