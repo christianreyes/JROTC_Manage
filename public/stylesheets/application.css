@@ -1,7 +1,11 @@
-body {
+body{
   background-color: #4B7399;
-  font-family: Verdana, Helvetica, Arial;
-  font-size: 14px;
+}
+
+body, p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   14px;
+  line-height: 18px;
 }
 
 a img {
@@ -12,9 +16,26 @@ a {
   color: #0000FF;
 }
 
-table {
-	width: 100%;
-	text-align: left;
+table.minimal {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+  font-size: 12px;
+  border-collapse: collapse;
+  width: 100%;
+  text-align: left;
+  margin: 14px 0px;
+}
+
+table.minimal th {
+  color: #1E2324;
+  font-size: 1.2em;
+  padding: 10px 8px;
+  border-bottom: 2px solid #1A1F1F;
+  text-align: left;
+}
+
+table.minimal td {
+  padding: 6px 8px;
+  border-bottom: 1px solid #A19F9A;
 }
 
 .clear {

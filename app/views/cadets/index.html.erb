@@ -1,15 +1,13 @@
 <h1>Listing cadets</h1>
 
-<table>
+<table class="minimal">
   <tr>
     <th>First name</th>
     <th>Last name</th>
     <th>Platoon</th>
     <th>Email</th>
     <th>Phone</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th colspan="3">Actions</th>
   </tr>
 
 <% @cadets.each do |cadet| %>
@@ -25,7 +23,5 @@
   </tr>
 <% end %>
 </table>
-
-<br />
 
 <%= link_to 'New Cadet', new_cadet_path %>
