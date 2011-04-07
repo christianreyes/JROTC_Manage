@@ -9,4 +9,8 @@ $(function(){
   $('.delete_cadet').bind('ajax:success', function() {
     $(this).closest('tr').fadeOut();
   });
+  
+  $('#contactable').contactable({
+    subject: 'Feeback Message from Website'
+  });
 });
