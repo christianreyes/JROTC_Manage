@@ -55,7 +55,6 @@ table.minimal img {
 #header {
   background-image: url('../images/camo-gradient.png');
   background-repeat: repeat-x;
-  border-bottom: 1px solid #000;
   height: 110px;
 }
 
@@ -81,6 +80,7 @@ table.minimal img {
   background-image: url('../images/menu-gradient.png');
   background-repeat: repeat-x;
   height: 30px;
+  border-top: 1px solid #000;
 }
 
 /*Menu code*/
