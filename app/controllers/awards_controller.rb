@@ -37,7 +37,7 @@ class AwardsController < ApplicationController
   # GET /awards/1/edit
   def edit
     @award = Award.find(params[:id])
-	@cadets = Cadets.all
+	@cadets = Cadet.all
 	@ribbons = Ribbon.all
   end
 
