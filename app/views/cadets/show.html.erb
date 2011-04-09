@@ -32,6 +32,7 @@
 <% else %>
 
 	<table>
+		<% for award in @awards %>
 		<tr>
 			<td><%= award.ribbon.name %></td>
 		</tr>
