@@ -3,7 +3,6 @@ body{
   color: #272F32;
   margin: 0;
   padding: 0;
-  background-color: black;
 }
 
 body, p, ol, ul, td {
@@ -145,9 +144,16 @@ table.minimal img {
   display: block;
   width: 800px;
   min-height: 400px;
-  margin: 5px auto;
+  margin: 0 auto;
   background-color: #FFFFFF;
   padding: 10px 40px;
+  border-left: 1px solid gray;
+  border-bottom: 1px solid gray;
+  border-right: 1px solid gray;
+  box-shadow: 7px 7px 8px #818181;
+  -webkit-box-shadow: 7px 7px 8px #818181;
+  -moz-box-shadow: 7px 7px 8px #818181;
+  filter: progid:DXImageTransform.Microsoft.dropShadow(color=#818181, offX=7, offY=7, positive=true);
 }
 
 #footer {
