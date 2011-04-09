@@ -38,7 +38,7 @@ namespace :db do
 			 ["Sea Cruise","seacruise"]]
 	
 	ribs.each_with_index do |data, i|  
-	  r = Ribbon.new( :name => data[0] , :image_path => "ribbons/" + data[1] + ".jpg", :seniority => i+1)
+	  r = Ribbon.new( :name => data[0] , :image_path => "ribbons/" + data[1] + ".jpg", :seniority => i)
 	  r.save!
 	end
     
