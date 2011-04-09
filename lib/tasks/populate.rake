@@ -3,12 +3,14 @@ namespace :db do
   # creating a rake task within db namespace called 'populate'
   # executing 'rake db:populate' will cause this script to run
   task :populate => :environment do
+    require 'populator'
+	require 'faker'
     # Need two gems to make this work: faker & populator
     # Docs at: http://populator.rubyforge.org/
     # Docs at: http://faker.rubyforge.org/rdoc/
     
-	# Step 0: clear any old data in the db
-    [Ribbon, Award].each(&:destroy_all)
+	# clear any old data in the db
+    [Cadet, Ribbon, Award].each(&:destroy_all)
 	
 	ribs =  [["Meritorious Achievement", "meritach"],
 			 ["Distinguished Unit", "distunit"],
@@ -42,9 +44,22 @@ namespace :db do
     
 	puts "Created #{ribs.length} ribbons"
 	
-    #Host.populate 12 do |host|
+	ribbons = Ribbon.all
+	
+    Cadet.populate 20 do |c|
       # get some fake data using the Faker gem
-      #host.first_name = Faker::Name.first_name
-      #host.last_name = Faker::Name.last_name
-  end
+      c.first_name = Faker::Name.first_name
+      c.last_name  = Faker::Name.last_name
+	  c.platoon = rand(10)
+	  c.email = Faker::Internet.free_email
+	  c.phone = Faker::PhoneNumber.phone_number
+	  
+	  Award.populate 2 do |a|
+	    a.cadet_id = c.id
+		a.ribbon_id = ribbons[rand(ribbons.length-1)].id
+	  end
+	end
+	puts "Created #{num} cadets"
+	
+end
 end
