@@ -27,6 +27,10 @@
 
 <h2>Cadets</h2>
 
+<% if @awards.empty? %>
+	<p>None</p>
+<% else %>
+
 <table>
 	<% for award in @awards %>
 	<tr>
@@ -34,6 +38,9 @@
 	</tr>
 	<% end %>
 </table>
+<% end %>
+
+<br/>
 
 <%= link_to 'Edit', edit_ribbon_path(@ribbon) %> |
 <%= link_to 'Back', ribbons_path %>
