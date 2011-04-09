@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110407065904) do
+ActiveRecord::Schema.define(:version => 20110409192050) do
 
   create_table "awards", :force => true do |t|
     t.integer  "ribbon_id"
@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(:version => 20110407065904) do
     t.time     "start_time"
     t.time     "end_time"
     t.text     "description"
-    t.integer  "cadet_in_charge_id"
+    t.string   "cadet_in_charge_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
