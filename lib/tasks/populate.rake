@@ -10,6 +10,7 @@ task :populate => :environment do
 	# Docs at: http://faker.rubyforge.org/rdoc/
 	
 	# clear any old data in the db
+	puts "Destroying all cadets, ribbons, awards..."
 	[Cadet, Ribbon, Award].each(&:destroy_all)
 	
 	ribs =  [["Meritorious Achievement", "meritach"],
@@ -46,17 +47,21 @@ task :populate => :environment do
 	
 	ribbons = Ribbon.all
 	
-	Cadet.populate 20 do |c|
+	20.times do
 		# get some fake data using the Faker gem
+		c = Cadet.new
 		c.first_name = Faker::Name.first_name
 		c.last_name  = Faker::Name.last_name
 		c.platoon = rand(10)
 		c.email = Faker::Internet.free_email
 		c.phone = Faker::PhoneNumber.phone_number
+		c.save!
 		
-		Award.populate 2 do |a|
+		2.times do
+			a = Award.new
 			a.cadet_id = c.id
 			a.ribbon_id = ribbons[rand(ribbons.length-1)].id
+			a.save!
 		end
 	end
 	puts "Created 20 cadets"
