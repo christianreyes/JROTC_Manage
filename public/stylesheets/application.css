@@ -3,7 +3,7 @@ body{
   color: #272F32;
   margin: 0;
   padding: 0;
-  background-color: gray;
+  background-color: #333;
 }
 
 body, p, ol, ul, td {
@@ -150,16 +150,16 @@ table.minimal tr:hover td{
   display: block;
   width: 800px;
   min-height: 400px;
-  margin: 0 auto;
+  margin: 0 auto 20px auto;
   background-color: #FFFFFF;
   padding: 10px 40px;
   border-left: 1px solid black;
   border-bottom: 1px solid black;
   border-right: 1px solid black;
-  box-shadow: 7px 7px 8px #545759;
-  -webkit-box-shadow: 7px 7px 8px #545759;
-  -moz-box-shadow: 7px 7px 8px #545759;
-  filter: progid:DXImageTransform.Microsoft.dropShadow(color=#545759, offX=7, offY=7, positive=true);
+  box-shadow: 7px 7px 8px #222;
+  -webkit-box-shadow: 7px 7px 8px #222;
+  -moz-box-shadow: 7px 7px 8px #222;
+  filter: progid:DXImageTransform.Microsoft.dropShadow(color=#222, offX=7, offY=7, positive=true);
 }
 
 #footer {
