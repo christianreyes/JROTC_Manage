@@ -8,4 +8,7 @@ class Cadet < ActiveRecord::Base
 	def name
 		last_name + ", " + first_name
 	end
+	
+	validates :name, :presence => true
+	validates :platoon, :presence => true
 end
