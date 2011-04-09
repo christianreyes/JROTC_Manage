@@ -13,33 +13,38 @@ task :populate => :environment do
 	puts "Destroying all cadets, ribbons, awards..."
 	[Cadet, Ribbon, Award].each(&:destroy_all)
 	
-	ribs =  [["Meritorious Achievement", "meritach"],
-			["Distinguished Unit", "distunit"],
-			["Distinguished Cadet","distcadet"],
-			["Honor Cadet", "honorcad"],
-			["Cadet Achievement","cadach"],
-			["Aptitude","aptitude"],
-			["Naval Science IV Outstanding Cadet","nsivoutcad"],
-			["Naval Science III Outstanding Cadet","nsiiioutcad"],
-			["Naval Science II Outstanding Cadet","nsiioutcad"],
-			["Naval Science I Outstanding Cadet","nsioutcad"],
-			["Exemplary Conduct","exemplary"],
-			["Academic Award","academic"],
-			["Exemplary Personal Appereance","personapp"],
-			["Physical Fitness","physfit"],
-			["Participation","participat"],
-			["Unit Service","unitserv"],
-			["Community Service","commserv"],
-			["Drill Team","drillteam"],
-			["Color Guard","colorguard"],
-			["Rifle Team","rifleteam"],
-			["Orienteering","orienteer"],
-			["Recruiting","recruiting"],
-			["Mini-Boot Camp","miniboot"],
-			["Sea Cruise","seacruise"]]
+	ribs =  [["Meritorious Achievement", "meritach",nil,nil],
+			["Distinguished Unit", "distunit",nil,nil],
+			["Distinguished Cadet","distcadet",nil,nil],
+			["Honor Cadet", "honorcad",nil,nil],
+			["Cadet Achievement","cadach",nil,nil],
+			["Aptitude","aptitude",nil,nil],
+			["Naval Science IV Outstanding Cadet","nsivoutcad",nil,nil],
+			["Naval Science III Outstanding Cadet","nsiiioutcad",nil,nil],
+			["Naval Science II Outstanding Cadet","nsiioutcad",nil,nil],
+			["Naval Science I Outstanding Cadet","nsioutcad",nil,nil],
+			["Exemplary Conduct","exemplary",nil,nil],
+			["Academic Award","academic",nil,nil],
+			["Exemplary Personal Appereance","personapp",nil,nil],
+			["Physical Fitness","physfit",nil,nil],
+			["Participation","participat",nil,3],
+			["Unit Service","unitserv",10,nil],
+			["Community Service","commserv",10,nil],
+			["Drill Team","drillteam",nil,3],
+			["Color Guard","colorguard",nil,3],
+			["Rifle Team","rifleteam",nil,3],
+			["Orienteering","orienteer",nil,3],
+			["Recruiting","recruiting",nil,nil],
+			["Mini-Boot Camp","miniboot",nil,1],
+			["Sea Cruise","seacruise",nil,1]]
 	
 	ribs.each_with_index do |data, i|  
-		r = Ribbon.new( :name => data[0] , :image_path => "ribbons/" + data[1] + ".jpg", :seniority => (i+1))
+		r = Ribbon.new( :name => data[0] , 
+						:image_path => "ribbons/" + data[1] + ".jpg", 
+						:seniority => (i+1),
+						:num_hours => data[2],
+						:num_events => data[3]
+						)
 		r.save!
 	end
 	
