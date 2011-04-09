@@ -11,7 +11,7 @@ $(function(){
   });
   
   $('#contactable').contactable({
-    subject: 'Feeback Message from Website',
+    subject: 'Feedback Message from Website',
 	url: 'http://jrotcmanage.heroku.com/feedback/'
   });
 });
