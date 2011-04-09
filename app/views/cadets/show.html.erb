@@ -33,6 +33,7 @@
 		<td><%= award.ribbon.name %></td>
 	</tr>
 	<% end %>
+	<%= "None" if @awards.empty? %>
 </table>
 
 <br/>
