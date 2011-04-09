@@ -4,9 +4,8 @@
   <tr>
     <th>Name</th>
     <th>Description</th>
-    <th>Seniority</th>
-    <th>Hours Needed</th>
-    <th>Events Needed</th>
+    <th># Hours</th>
+    <th># Events</th>
     <th></th>
     <th></th>
     <th></th>
@@ -16,7 +15,6 @@
   <tr>
     <td><%= ribbon.name %></td>
     <td><%= image_tag(ribbon.image_path, :size => "99x27", :alt => ribbon.image_path) if ribbon.image_path %> </td>
-    <td><%= ribbon.seniority %></td>
     <td><%= ribbon.num_hours %></td>
     <td><%= ribbon.num_events %></td>
     <td><%= link_to 'Show', ribbon %></td>
