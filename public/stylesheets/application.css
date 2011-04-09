@@ -3,6 +3,7 @@ body{
   color: #272F32;
   margin: 0;
   padding: 0;
+  background-color: black;
 }
 
 body, p, ol, ul, td {
