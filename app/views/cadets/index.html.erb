@@ -2,21 +2,17 @@
 
 <table class="minimal">
   <tr>
-    <th>First name</th>
-    <th>Last name</th>
+    <th>Name</th>
     <th>Platoon</th>
     <th>Email</th>
-    <th>Phone</th>
     <th colspan="3">Actions</th>
   </tr>
 
 <% @cadets.each do |cadet| %>
   <tr>
-    <td><%= cadet.first_name %></td>
-    <td><%= cadet.last_name %></td>
+    <td><%= cadet.name %></td>
     <td><%= cadet.platoon %></td>
     <td><%= cadet.email %></td>
-    <td><%= cadet.phone %></td>
     <td><%= link_to 'Show', cadet %></td>
     <td><%= link_to 'Edit', edit_cadet_path(cadet) %></td>
     <td><%= link_to 'Destroy', cadet, :confirm => 'Are you sure?', 
