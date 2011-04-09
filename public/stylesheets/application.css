@@ -47,6 +47,11 @@ table.minimal img {
   vertical-align: middle;
 }
 
+table.minimal tr:hover td{
+	color: #004;
+	background-color: #DBE1E8;
+}
+
 .clear {
   clear: both;
   height: 0;
