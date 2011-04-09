@@ -27,13 +27,17 @@
 
 <h2>Ribbons</h2>
 
-<table>
-	<% for award in @awards %>
-	<tr>
-		<td><%= award.ribbon.name %></td>
-	</tr>
-	<% end %>
-</table>
+<% if @awards.empty? %>
+	<p>None</p>
+<% else %>
+
+	<table>
+		<tr>
+			<td><%= award.ribbon.name %></td>
+		</tr>
+		<% end %>
+	</table>
+<% end %>
 
 <br/>
 
