@@ -71,7 +71,7 @@ table.minimal tr:hover td{
   background-image: url('../images/JROTC-Manage.png');
   background-repeat: no-repeat;
   height: 75px;
-  background-position: 0 top;
+  background-position: -5px top;
   text-indent: -1000em;
   width: 420px;
 }
