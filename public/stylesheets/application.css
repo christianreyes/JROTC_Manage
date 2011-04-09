@@ -70,6 +70,10 @@ table.minimal img {
   width: 420px;
 }
 
+#header a{
+  text-decoration: none;
+}
+
 #header_container {
   margin: 0 auto;
   padding: 20px 0px;
