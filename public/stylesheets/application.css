@@ -3,6 +3,7 @@ body{
   color: #272F32;
   margin: 0;
   padding: 0;
+  background-color: gray;
 }
 
 body, p, ol, ul, td {
@@ -147,13 +148,13 @@ table.minimal img {
   margin: 0 auto;
   background-color: #FFFFFF;
   padding: 10px 40px;
-  border-left: 1px solid gray;
-  border-bottom: 1px solid gray;
-  border-right: 1px solid gray;
-  box-shadow: 7px 7px 8px #818181;
-  -webkit-box-shadow: 7px 7px 8px #818181;
-  -moz-box-shadow: 7px 7px 8px #818181;
-  filter: progid:DXImageTransform.Microsoft.dropShadow(color=#818181, offX=7, offY=7, positive=true);
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  box-shadow: 7px 7px 8px #545759;
+  -webkit-box-shadow: 7px 7px 8px #545759;
+  -moz-box-shadow: 7px 7px 8px #545759;
+  filter: progid:DXImageTransform.Microsoft.dropShadow(color=#545759, offX=7, offY=7, positive=true);
 }
 
 #footer {
