@@ -25,7 +25,7 @@ task :populate => :environment do
 			["Naval Science I Outstanding Cadet","nsioutcad",nil,nil],
 			["Exemplary Conduct","exemplary",nil,nil],
 			["Academic Award","academic",nil,nil],
-			["Exemplary Personal Appereance","personapp",nil,nil],
+			["Exemplary Personal Appearance","personapp",nil,nil],
 			["Physical Fitness","physfit",nil,nil],
 			["Participation","participat",nil,3],
 			["Unit Service","unitserv",10,nil],
