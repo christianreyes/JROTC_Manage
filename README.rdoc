@@ -33,9 +33,7 @@ The system will most likely not be under active development during the academic 
 <b>Group email:</b> jrotcmanage@gmail.com
 
 Run this command to get your database set up:
-
-	rake db:migrate
+    rake db:migrate
 
 Run this command to populate the database with the ribbons:
-
     rake db:populate
