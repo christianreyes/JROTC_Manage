@@ -38,7 +38,7 @@ namespace :db do
 			 ["Sea Cruise","seacruise"]]
 	
 	ribs.each_with_index do |data, i|  
-	  r = Ribbon.new( :name => data[0] , :image_path => "ribbons/" + data[1] + ".jpg", :seniority => i+1)
+	  r = Ribbon.new( :name => data[0] , :image_path => "ribbons/" + data[1] + ".jpg", :seniority => (i+1))
 	  r.save!
 	end
     
@@ -51,7 +51,7 @@ namespace :db do
       c.first_name = Faker::Name.first_name
       c.last_name  = Faker::Name.last_name
 	  c.platoon = rand(10)
-	  c.email = Faker::Internet.free_email
+	  c.email = Faker::Internet.free_email(c.first_name + "." + c.last_name)
 	  c.phone = Faker::PhoneNumber.phone_number
 	  
 	  Award.populate 2 do |a|
