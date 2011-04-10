@@ -56,6 +56,7 @@ task :populate => :environment do
 		# get some fake data using the Faker gem
 		c = Cadet.new
 		c.first_name = Faker::Name.first_name
+		c.middle_name = Faker::Name.first_name
 		c.last_name  = Faker::Name.last_name
 		c.platoon = rand(10)
 		c.email = Faker::Internet.free_email(c.first_name + "." + c.last_name)
