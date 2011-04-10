@@ -8,7 +8,7 @@ class Cadet < ActiveRecord::Base
 	
 	def name
 		if middle_name
-			last_name + ", " + first_name + " " + middle_name[0].to_s
+			last_name + ", " + first_name + " " + middle_name.chars.to_a[0]
 		else
 			last_name + ", " + first_name
 		end
