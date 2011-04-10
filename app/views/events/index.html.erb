@@ -16,9 +16,9 @@
 <% @events.each do |event| %>
   <tr>
     <td><%= event.name %></td>
-    <td><%= event.date %></td>
-    <td><%= event.start_time %></td>
-    <td><%= event.end_time %></td>
+    <td><%= event.date.strftime("%d %b %Y") %></td>
+    <td><%= event.start_time.strftime("%H%M") %></td>
+    <td><%= event.end_time.strftime("%H%M") %></td>
     <td><%= event.description %></td>
     <td><%= event.cadet.name if event.cadet %></td>
     <td><%= link_to 'Show', event %></td>

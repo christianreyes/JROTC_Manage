@@ -7,17 +7,17 @@
 
 <p>
   <b>Date:</b>
-  <%= @event.date %>
+  <%= @event.date.strftime("%d %b %Y") %>
 </p>
 
 <p>
   <b>Start time:</b>
-  <%= @event.start_time %>
+  <%= @event.start_time.strftime("%H%M") %>
 </p>
 
 <p>
   <b>End time:</b>
-  <%= @event.end_time %>
+  <%= @event.end_time.strftime("%H%M") %>
 </p>
 
 <p>
