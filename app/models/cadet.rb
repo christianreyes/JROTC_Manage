@@ -14,6 +14,7 @@ class Cadet < ActiveRecord::Base
 		end
 	end
 	
-	validates :name, :presence => true
+	validates :first_name, :presence => true
+	validates :last_name, :presence => true
 	validates :platoon, :presence => true
 end
