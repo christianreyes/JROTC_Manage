@@ -20,6 +20,10 @@ a {
   color: #0000FF;
 }
 
+.page_links {
+	float: right;
+}
+
 table.minimal {
   font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
   font-size: 12px;

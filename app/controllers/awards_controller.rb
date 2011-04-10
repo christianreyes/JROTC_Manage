@@ -2,7 +2,7 @@ class AwardsController < ApplicationController
   # GET /awards
   # GET /awards.xml
   def index
-    @awards = Award.all
+    @awards = Award.all.paginate :page => params[:page], :per_page => Award.per_page
 
     respond_to do |format|
       format.html # index.html.erb
