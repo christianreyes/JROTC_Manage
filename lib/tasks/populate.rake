@@ -56,7 +56,9 @@ task :populate => :environment do
 		# get some fake data using the Faker gem
 		c = Cadet.new
 		c.first_name = Faker::Name.first_name
-		c.middle_name = Faker::Name.first_name
+		if (rand() < 0.95)
+			c.middle_name = Faker::Name.first_name
+		end
 		c.last_name  = Faker::Name.last_name
 		c.platoon = rand(10)
 		c.email = Faker::Internet.free_email(c.first_name + "." + c.last_name)
@@ -98,7 +100,9 @@ task :populate => :environment do
 		e.start_time = rand(10).hours.from_now
 		e.end_time = e.start_time + (rand(3)+1).hours
 		e.description = Faker::Lorem.sentence(rand(15))
-		e.cadet_in_charge_id = cadetList[rand(cadetList.length-1)].id
+		if (rand() < 0.75)
+			e.cadet_in_charge_id = cadetList[rand(cadetList.length-1)].id
+		end
 		e.save!
 	end
 
