@@ -10,7 +10,11 @@
 
 <% @cadets.each do |cadet| %>
   <tr>
-    <td><%= cadet.name %></td>
+	<% if cadet.middle_name %>
+		<td><%= cadet.name + " " + (cadet.middle_name if cadet.middle_name) %></td>
+	<% else %>
+		<td><%= cadet.name %></td>
+	<% end %>
     <td><%= cadet.platoon %></td>
     <td><%= cadet.email %></td>
     <td><%= link_to 'Show', cadet %></td>
