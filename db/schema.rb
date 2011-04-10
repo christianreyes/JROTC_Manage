@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110410193519) do
+ActiveRecord::Schema.define(:version => 20110407065904) do
 
   create_table "awards", :force => true do |t|
     t.integer  "ribbon_id"
@@ -27,7 +27,6 @@ ActiveRecord::Schema.define(:version => 20110410193519) do
     t.string   "phone"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "middle_name"
   end
 
   create_table "events", :force => true do |t|
@@ -36,11 +35,9 @@ ActiveRecord::Schema.define(:version => 20110410193519) do
     t.time     "start_time"
     t.time     "end_time"
     t.text     "description"
-    t.string   "cadet_in_charge_id"
+    t.integer  "cadet_in_charge_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.float    "longitude"
-    t.float    "latitude"
   end
 
   create_table "hours", :force => true do |t|
