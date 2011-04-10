@@ -72,20 +72,36 @@ task :populate => :environment do
 	puts "Created 20 cadets"
 	puts "Create 2 awards for every cadet"
 	
+	cadetList = Cadet.all
 	
-	eventArray = ["Gate Guard", "PRT", "CG Practice", "Orienteering", "Nationals Practice", "AMI Practice", "AX Practice", "Marksmanship Practice"]
+	eventArray = ["Gate Guard", 
+					"PRT", 
+					"CG Practice", 
+					"Orienteering", 
+					"Nationals Practice", 
+					"AMI Practice", 
+					"AX Practice", 
+					"Colorguard",
+					"Cadet Staff Meeting",
+					"AR Practice",
+					"UX Practice",
+					"Brain Brawl",
+					"UR Practice",
+					"Drill Test",
+					"Marksmanship Practice"]
 	
-	5.times do
+	15.times do
 		e = Event.new
-		e.name = eventArray[rand(7)] 
+		e.name = eventArray[rand(14)] 
 		e.date = rand(10.days).from_now
-		e.start_time = rand(10.days).from_now
-		e.end_time = e.start_time+2.hours
-		e.description = "Descriptive description"
+		e.start_time = rand(10).hours.from_now
+		e.end_time = e.start_time + (rand(3)+1).hours
+		e.description = Faker::Lorem.sentence(rand(15))
+		e.cadet_in_charge_id = cadetList[rand(cadetList.length-1)].id
 		e.save!
 	end
 
-	puts "Created 5 events"
+	puts "Created 15 events"
 	
 	end
 end	
