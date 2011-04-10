@@ -10,8 +10,8 @@ task :populate => :environment do
 	# Docs at: http://faker.rubyforge.org/rdoc/
 	
 	# clear any old data in the db
-	puts "Destroying all cadets, ribbons, awards..."
-	[Cadet, Ribbon, Award].each(&:destroy_all)
+	puts "Destroying all cadets, ribbons, awards, events..."
+	[Cadet, Ribbon, Award, Event].each(&:destroy_all)
 	
 	ribs =  [["Meritorious Achievement", "meritach",nil,nil],
 			["Distinguished Unit", "distunit",nil,nil],
@@ -71,6 +71,21 @@ task :populate => :environment do
 	end
 	puts "Created 20 cadets"
 	puts "Create 2 awards for every cadet"
+	
+	
+	eventArray = ["Gate Guard", "PRT", "CG Practice", "Orienteering", "Nationals Practice", "AMI Practice", "AX Practice", "Marksmanship Practice"]
+	
+	5.times do
+		e = Event.new
+		e.name = eventArray[rand(7)] 
+		e.date = rand(10.days).from_now
+		e.start_time = rand(10.days).from_now
+		e.end_time = e.start_time+2.hours
+		e.description = "Descriptive description"
+		e.save!
+	end
+
+	puts "Created 5 events"
 	
 	end
 end	
