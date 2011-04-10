@@ -3,6 +3,7 @@ class EventsController < ApplicationController
   # GET /events.xml
   def index
     @events = Event.all
+	@cadets = Cadet.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -14,7 +15,8 @@ class EventsController < ApplicationController
   # GET /events/1.xml
   def show
     @event = Event.find(params[:id])
-
+	@cadets = Cadet.all
+	
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @event }
@@ -25,6 +27,7 @@ class EventsController < ApplicationController
   # GET /events/new.xml
   def new
     @event = Event.new
+	@cadets = Cadet.all
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,13 +38,14 @@ class EventsController < ApplicationController
   # GET /events/1/edit
   def edit
     @event = Event.find(params[:id])
+	@cadets = Cadet.all
   end
 
   # POST /events
   # POST /events.xml
   def create
     @event = Event.new(params[:event])
-
+	@cadets = Cadet.all
     respond_to do |format|
       if @event.save
         format.html { redirect_to(@event, :notice => 'Event was successfully created.') }
@@ -57,7 +61,7 @@ class EventsController < ApplicationController
   # PUT /events/1.xml
   def update
     @event = Event.find(params[:id])
-
+	@cadets = Cadet.all
     respond_to do |format|
       if @event.update_attributes(params[:event])
         format.html { redirect_to(@event, :notice => 'Event was successfully updated.') }
