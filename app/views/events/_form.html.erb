@@ -33,7 +33,7 @@
   </div>
   <div class="field">
     <%= f.label :cadet_in_charge_id %><br />
-	<%= f.collection_select(:cadet_in_charge_id ,@cadets,:id, :name,{:prompt =>"Select Cadet"})%>
+	<%= f.collection_select(:cadet_in_charge_id ,@cadets,:id, :name,{:include_blank =>"Select Cadet"})%>
 	<br />
   </div>
   
