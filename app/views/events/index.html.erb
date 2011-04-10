@@ -6,7 +6,6 @@
     <th>Date</th>
     <th>Start time</th>
     <th>End time</th>
-    <th>Description</th>
     <th>Cadet in charge</th>
     <th></th>
     <th></th>
@@ -19,7 +18,6 @@
     <td><%= event.date.strftime("%d %b %Y") %></td>
     <td><%= event.start_time.strftime("%H%M") %></td>
     <td><%= event.end_time.strftime("%H%M") %></td>
-    <td><%= event.description %></td>
     <td><%= event.cadet.name if event.cadet %></td>
     <td><%= link_to 'Show', event %></td>
     <td><%= link_to 'Edit', edit_event_path(event) %></td>
