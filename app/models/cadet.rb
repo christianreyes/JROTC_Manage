@@ -1,4 +1,5 @@
 class Cadet < ActiveRecord::Base
+	has_many :events, :source => :cadet_in_charge_id
 	has_many :awards, :dependent => :destroy
 	has_many :ribbons, :through => :awards
 	belongs_to :ribbon
