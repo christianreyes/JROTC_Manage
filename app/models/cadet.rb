@@ -7,7 +7,11 @@ class Cadet < ActiveRecord::Base
 	scope :all, order(:last_name.asc, :first_name.asc)
 	
 	def name
-		last_name + ", " + first_name
+		if middle_name
+			last_name + ", " + first_name + " " + middle_name[0]
+		else
+			last_name + ", " + first_name
+		end
 	end
 	
 	validates :name, :presence => true
