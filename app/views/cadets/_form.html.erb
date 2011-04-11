@@ -28,6 +28,11 @@
     <%= f.text_field :platoon %>
   </div>
   <div class="field">
+    <%= f.label :class_year %><br />
+	<%= f.select(:class_year,{ "1" => 1, "2" => 2, "3" => 3, "4" => 4}, {:prompt =>"Select Year"})%>
+	<br />
+  </div>
+  <div class="field">
     <%= f.label :email %><br />
     <%= f.text_field :email %>
   </div>

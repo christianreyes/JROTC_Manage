@@ -4,6 +4,7 @@
   <tr>
     <th>Name</th>
     <th>Platoon</th>
+	<th>Year</th>
     <th>Email</th>
     <th colspan="3">Actions</th>
   </tr>
@@ -12,6 +13,7 @@
   <tr>
 	<td><%= cadet.name %></td>
     <td><%= cadet.platoon %></td>
+	<td><%= cadet.class_year %></td>
     <td><%= cadet.email %></td>
     <td><%= link_to 'Show', cadet %></td>
     <td><%= link_to 'Edit', edit_cadet_path(cadet) %></td>
