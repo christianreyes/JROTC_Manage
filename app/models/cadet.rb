@@ -13,7 +13,7 @@ class Cadet < ActiveRecord::Base
 			last_name + ", " + first_name
 		end
 	end
-	
+
 	validates :first_name, :presence => true
 	validates :last_name, :presence => true
 	validates :platoon, :presence => true
