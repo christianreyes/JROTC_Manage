@@ -1,0 +1,29 @@
+<h1>Listing rosters</h1>
+
+<table>
+  <tr>
+    <th>Event</th>
+    <th>Cadet</th>
+    <th>Sign in time</th>
+    <th>Sign out time</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @rosters.each do |roster| %>
+  <tr>
+    <td><%= roster.event_id %></td>
+    <td><%= roster.cadet_id %></td>
+    <td><%= roster.sign_in_time %></td>
+    <td><%= roster.sign_out_time %></td>
+    <td><%= link_to 'Show', roster %></td>
+    <td><%= link_to 'Edit', edit_roster_path(roster) %></td>
+    <td><%= link_to 'Destroy', roster, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Roster', new_roster_path %>
