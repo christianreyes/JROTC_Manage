@@ -61,6 +61,7 @@ task :populate => :environment do
 		end
 		c.last_name  = Faker::Name.last_name
 		c.platoon = rand(10)
+		c.class_year = rand(4)+1
 		c.email = Faker::Internet.free_email(c.first_name + "." + c.last_name)
 		c.phone = Faker::PhoneNumber.phone_number
 		c.save!
