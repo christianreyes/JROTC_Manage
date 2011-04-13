@@ -5,8 +5,9 @@ $(function(){
   $("#award_cadet_token_id").tokenInput("/cadets.json", { 
 	crossDomain: false,
 	prePopulate: $("#award_cadet_token_id").data("pre"),
-	tokenLimit: 1,
-	hintText: "Type the name of the Cadet"
+	hintText: "Type the name of the Cadet",
+	preventDuplicates: true,
+	tokenLimit: 1
   });  
   
   $('.delete_ribbon').bind('ajax:success', function() {
