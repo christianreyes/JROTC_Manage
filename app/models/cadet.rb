@@ -13,6 +13,22 @@ class Cadet < ActiveRecord::Base
 			last_name + ", " + first_name
 		end
 	end
+	
+	def as_json(options = {})
+		{
+			:id => self.id,
+			:name => self.name
+		}
+	end
+	
+	def self.name_like(input_name)
+		cadets = Cadet.all
+		if input_name
+			return cadets.select{ |c| c.name.downcase=~/\w*#{input_name.downcase}\w*/} 
+		else
+			return cadets
+		end
+	end
 
 	validates :first_name, :presence => true
 	validates :last_name, :presence => true

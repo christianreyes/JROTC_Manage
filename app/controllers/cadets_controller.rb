@@ -2,12 +2,14 @@ class CadetsController < ApplicationController
   # GET /cadets
   # GET /cadets.xml
   def index
-    @cadets = Cadet.all
+
+	@cadets = Cadet.name_like(params[:q])
 
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @cadets }
 	  format.js   { render :nothing => true } 
+	  format.json { render :json => @cadets }
     end
   end
 
