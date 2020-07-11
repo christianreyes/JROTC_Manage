@@ -22,4 +22,4 @@ group :development, :test do
    gem 'rails-erd', '0.4.3'
 end
 
-ruby "1.9.3"
+# ruby "1.9.3"
