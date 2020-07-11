@@ -1,4 +1,4 @@
-#JROTC Manage
+# JROTC Manage
 
 An open-source management application for Junior Reserve Officers' Training Corps units.
 
