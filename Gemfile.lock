@@ -28,26 +28,24 @@ GEM
       activemodel (= 3.0.5)
       activesupport (= 3.0.5)
     activesupport (3.0.5)
-    arel (2.0.9)
-    bcrypt-ruby (2.1.4-x86-mingw32)
+    arel (2.0.10)
+    bcrypt-ruby (2.1.4)
     builder (2.1.2)
-    configuration (1.2.0)
+    concurrent-ruby (1.1.6)
+    configuration (1.3.4)
     erubis (2.6.6)
       abstract (>= 1.0.0)
     faker (0.9.5)
       i18n (~> 0.4)
-    heroku (1.19.1)
-      activesupport (>= 2.1.0)
-      launchy (~> 0.3.2)
-      rest-client (>= 1.4.0, < 1.7.0)
-    i18n (0.5.0)
+    i18n (0.9.5)
+      concurrent-ruby (~> 1.0)
     jquery-rails (0.2.7)
       rails (~> 3.0)
       thor (~> 0.14.4)
     launchy (0.3.7)
       configuration (>= 0.0.5)
       rake (>= 0.8.1)
-    mail (2.2.15)
+    mail (2.2.20)
       activesupport (>= 2.3.6)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
@@ -56,13 +54,14 @@ GEM
       activerecord (~> 3.0.2)
       activesupport (~> 3.0.2)
       arel (~> 2.0.2)
-    mime-types (1.16)
+    mime-types (1.25.1)
     mocha (0.9.12)
     nifty-generators (0.4.6)
-    nokogiri (1.4.4.1-x86-mingw32)
-    polyglot (0.3.1)
+    nokogiri (1.2.0)
+    pg (0.18.4)
+    polyglot (0.3.5)
     populator (1.0.0)
-    rack (1.2.2)
+    rack (1.2.8)
     rack-mount (0.6.14)
       rack (>= 1.0.0)
     rack-test (0.5.7)
@@ -85,13 +84,13 @@ GEM
       rake (>= 0.8.7)
       thor (~> 0.14.4)
     rake (0.8.7)
-    rest-client (1.6.1)
-      mime-types (>= 1.16)
-    ruby-graphviz (0.9.20)
+    rest-client (1.6.14)
+      mime-types (~> 1.16)
+    ruby-graphviz (0.9.21)
     sequel (3.20.0)
     sinatra (1.0)
       rack (>= 1.0)
-    sqlite3 (1.3.3-x86-mingw32)
+    sqlite3 (1.4.2)
     sqlite3-ruby (1.3.3)
       sqlite3 (>= 1.3.3)
     taps (0.3.21)
@@ -102,28 +101,31 @@ GEM
       sinatra (~> 1.0.0)
       sqlite3-ruby (~> 1.2)
     thor (0.14.6)
-    treetop (1.4.9)
+    treetop (1.4.15)
+      polyglot
       polyglot (>= 0.3.1)
-    tzinfo (0.3.26)
+    tzinfo (0.3.57)
     webrat (0.7.2)
       nokogiri (>= 1.2.0)
       rack (>= 1.0)
       rack-test (>= 0.5.3)
 
 PLATFORMS
-  x86-mingw32
+  ruby
 
 DEPENDENCIES
-  bcrypt-ruby
-  faker
-  heroku
-  jquery-rails
-  meta_where
-  mocha
-  nifty-generators
-  populator
+  bcrypt-ruby (= 2.1.4)
+  faker (= 0.9.5)
+  jquery-rails (= 0.2.7)
+  launchy (= 0.3.7)
+  meta_where (= 1.0.1)
+  mocha (= 0.9.12)
+  nifty-generators (= 0.4.6)
+  nokogiri (= 1.2.0)
+  pg (= 0.18.4)
+  populator (= 1.0.0)
   rails (= 3.0.5)
-  rails-erd
-  sqlite3-ruby
-  taps
-  webrat
+  rails-erd (= 0.4.3)
+  rake (= 0.8.7)
+  taps (= 0.3.21)
+  webrat (= 0.7.2)
