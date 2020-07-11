@@ -1,4 +1,4 @@
-=JROTC Manage
+#JROTC Manage
 
 An open-source management application for Junior Reserve Officers' Training Corps units.
 
@@ -14,23 +14,25 @@ JROTC Manage has many benefits over the traditional systems in place, most of wh
 
 Currently, many units track event and ribbon data with spreadsheets or paper forms. Methodologies which can easily lead to errors or inaccountability.
 
-== Current status
+## Current status
 
 The application is currently in a prototyping stage and does not fully address the scope of managing cadets, ribbons, or events. The system will soon have authentication required in order to minimize junk data.
 
-== Short term development goal (Summer 2011)
+Also, most of this did not get implemented.
+
+![Screenshot](/screenshot.jpg)
+
+## Short term development goal (Summer 2011)
 
 By the end of Summer 2011, we plan to have the system managing cadet, event, ribbon, and award data. All other features will be on hold or in a prototyping / experimental phase. The system is planned to be trial tested as a management system by one unit. The trial will be extended to other units after the initial trial period.
 
 The system will most likely not be under active development during the academic school year, but patches will be issued and support will be available to quickly resolve problems.
 
-== Resources
+## Resources
 
-<b>Application link:</b> http://jrotcmanage.heroku.com
+Application link: http://jrotcmanage.heroku.com
 
-<b>Entity-Relationship Diagram:</b> here[http://www.gliffy.com/publish/2588747/]
-
-<b>Group email:</b> jrotcmanage@gmail.com
+Entity-Relationship Diagram: http://www.gliffy.com/publish/2588747/
 
 Run this command to get your database set up:
     rake db:migrate
