@@ -15,7 +15,7 @@ gem 'meta_where', '1.0.1'
 # and rake tasks are available in development mode:
 group :development, :test do
    gem 'launchy', '0.3.7'
-   gem 'nokogiri','1.2.0'
+   gem 'nokogiri','1.11.4'
    gem 'webrat', '0.7.2'
    gem 'taps', '0.3.21'
    gem 'nifty-generators', '0.4.6'
